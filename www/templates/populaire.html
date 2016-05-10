@@ -1,0 +1,22 @@
+<ion-view view-title="Populaire">
+  <ion-content>
+    <div class="list card" ng-repeat="ch in chaine.videos">
+
+      <div class="item item-avatar">
+        <img src="{{ch.preview}}">
+        <h2>{{ch.title}}</h2>
+        <p>{{ch.description}}</p>
+      </div>
+
+      <div class="item item-image">
+        <img src="{{ch.preview}}" width="320" height="240">
+      </div>
+
+      <a class="item item-icon-left assertive" href="#">
+        <i class="icon ion-music-note"></i>
+        Start listening
+      </a>
+
+    </div>
+  </ion-content>
+</ion-view>

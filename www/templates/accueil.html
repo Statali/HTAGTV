@@ -1,0 +1,83 @@
+<ion-view >
+
+  <ion-tabs class="tabs-striped tabs-color-positive tabs-background-light">
+    <ion-tab class="tab-title" title="Comedie">
+      <ion-content class="padding img-responsive" style="background: url(../img/background.png)" ng-controller="InfosVideos">
+        <div style="margin-top: 10%">
+          <div class="list card" ng-repeat="ch in chaine.videos">
+
+          <div class="item item-avatar">
+            <img src="{{ch.preview}}" class="img-responsive">
+            <h2>{{ch.title}}</h2>
+            <p>{{ch.description}}</p>
+          </div>
+
+          <div class="item item-image">
+            <img src="{{ch.preview}}" class="img-responsive">
+          </div>
+
+          <a class="item item-icon-left positive" href="#">
+            <i class="icon ion-music-note"></i>
+            Start listening
+          </a>
+
+          </div>
+        </div>
+      </ion-content>
+    </ion-tab>
+    <ion-tab class="tab-title" title="Serie Tv" id="serie-tv">
+      <ion-content class="padding img-responsive" style="background: url(../img/background.png)" ng-controller="InfoStream">
+        <div class="list" style="margin-top: 10%">
+          <a class="item item-avatar" href="#" ng-repeat="g in games.top">
+            <img src="{{g.game.box.medium}}" class="img-responsive">
+            <h2>{{g.game.name}}</h2>
+            <p>{{g.viewers}}</p>
+          </a>
+        </div>
+      </ion-content>
+    </ion-tab>
+    <ion-tab class="tab-title" title="Mes Favoris">
+      <ion-content class="padding img-responsive" style="background: url(../img/background.png)">
+
+      </ion-content>
+    </ion-tab>
+    <ion-tab class="tab-title" title="Faits Divers">
+      <ion-content class="padding img-responsive" style="background: url(../img/background.png)">
+
+      </ion-content>
+    </ion-tab>
+
+  </ion-tabs>
+  <!--
+  <ion-content scroll="false">
+  <tab-slide-box>
+    <div class="tsb-icons">
+      <div class="tsb-ic-wrp">
+        <ion-scroll direction="x" class="tsb-hscroll">
+          <a href="javascript:;" class="ion-home"></a>
+          <a href="javascript:;" class="ion-email"></a>
+          <a href="javascript:;" class="ion-model-s"></a>
+          <a href="javascript:;" class="ion-person"></a>
+        </ion-scroll>
+      </div>
+    </div>
+    <ion-slide-box show-pager="false" on-slide-changed="slideHasChanged($index)">
+      <ion-slide>
+        <h1>Home content</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Games content</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Mail content</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Car content</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Profile content</h1>
+      </ion-slide>
+    </ion-slide-box>
+  </tab-slide-box>
+  </ion-content>-->
+</ion-view>

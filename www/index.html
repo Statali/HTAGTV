@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html  ng-app="htagtv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/tabSlideBox.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/tabSlideBox.js"></script>
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-controller="HomeCrtl">
+    <ion-side-menus>
+      <ion-side-menu-content>
+        <ion-nav-bar class=" bar bar-positive">
+          <ion-nav-back-button></ion-nav-back-button>
+          <ion-nav-buttons>
+            <button class="button button-icon ion-navicon-round" menu-toggle="left"></button>
+            <h1 class="title"><img src="img/logo1.png" height="40"></h1>
+            <button class="button button-icon ion-android-more-vertical" menu-toggle="right" ng-click="popover.show($event)"></button>
+          </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view>
+
+        </ion-nav-view>
+      </ion-side-menu-content>
+      <ion-side-menu side="left">
+          <ion-item ><img src="img/logo1.png" height="40"></ion-item>
+        <ion-item ui-sref="actualite" menu-close>Actu publicite</ion-item>
+        <ion-item ui-sref="divertissement" menu-close>Divertissement</ion-item>
+        <ion-item menu-close>Espace instruction</ion-item>
+        <ion-item menu-close>Espace d'information</ion-item>
+        <ion-item menu-close>Magazine feminin</ion-item>
+        <ion-item menu-close>Magazine sante</ion-item>
+        <ion-item menu-close>Magazine d'infos</ion-item>
+        <ion-item menu-close>Magazine societe</ion-item>
+      </ion-side-menu>
+     
+    </ion-side-menus>
+  <script id="popover.html" type="text/ng-template">
+      <ion-popover-view>
+        <ion-content>
+          <div class="list">
+            <ion-item class="item icon ion-earth"  target="_blank">
+              Langues
+            </ion-item>
+            <ion-item class="item icon ion-ios-star" target="_blank">
+              &#201;valuer l'Appli
+            </ion-item>
+            <ion-item class="item icon ion-android-mail"  target="_blank">
+              Contact
+            </ion-item>
+            <ion-item class="item icon ion-person-stalker" target="_blank">
+             &#192; Propos
+           </ion-item>
+          </div>
+        </ion-content>
+      </ion-popover-view>
+    </script>
+  </body>
+</html>

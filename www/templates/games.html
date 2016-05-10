@@ -1,0 +1,11 @@
+<ion-view view-title="Liste des Films">
+  <ion-content>
+    <div class="list">
+      <a class="item item-avatar" href="#" ng-repeat="g in games.top">
+        <img src="{{g.game.box.medium}}" class="img-responsive">
+        <h2>{{g.game.name}}</h2>
+        <p>{{g.viewers}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
